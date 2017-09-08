@@ -30,4 +30,5 @@ mongodb
 "mongoose": "^4.0.0",  
 "passport": "^0.2.0",  
 "passport-local": "^1.0.0",  
-"socket.io": "^2.0.3"  
+"socket.io": "^2.0.3",  
+"highlight.js": "^9.12.0"  
