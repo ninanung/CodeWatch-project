@@ -1,0 +1,92 @@
+﻿<% include _header %>
+
+<% if (currentUser) { %>
+<h1><%= currentUser.name() %> Welcome to CodeWatch!</h1>
+<hr>
+<h2>Find and Watch!</h2>
+<table style="table-layout: fixed;" class="table table-striped">
+	<thead>
+	<tr>
+		<th scope="row" style="width: 50px;">Num</th>
+		<th style="width: 450px;">Title</th>
+		<th style="width: 100px;">Writer</th>
+		<th style="width: 250px;">Date</th>
+		<th>password</th>
+		<th>submit</th>
+	</tr>
+	</thead>
+	<tbody>
+	<% if(contents.length > 0) {%>
+		<% var i = 0 %>
+		<% contents.forEach(function(item) { %>
+		<% i++ %>
+		<tr>
+			<% if(item.password === "no password, there's no password, really no password") { %>
+				<th scope="row"><%= i %></th>
+				<td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><a href="/board/<%= item.title %>"><%= item.title %></a></td>
+				<td><%= item.writer %></td>
+				<td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><%= item.date %></td>
+				<td>unlocked</td>
+				<td>none</td>
+			<% } else { %>
+				<% if(currentUser.name() !== item.writer) { %>
+					<th scope="row"><%= i %></th>
+					<td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><%= item.title %></td>
+					<td><%= item.writer %></td>
+					<td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><%= item.date %></td>
+					<form action="/board/<%= item.title %>" method="post">
+						<td><input type="password" name="unlock" placeholder="locked" style="width: 53px;"></td>
+						<td><input type="submit" value="Watch"></td>
+					</form>
+				<% } else { %>
+					<th scope="row"><%= i %></th>
+					<td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><a href="/board/<%= item.title %>"><%= item.title %></a></td>
+					<td><%= item.writer %></td>
+					<td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><%= item.date %></td>
+					<td>unlocked</td>
+					<td>none</td>
+				<% } %>
+			<% } %>
+		</tr>
+		<% }) %>
+	<% } else { %>
+		<tr>
+			<td colspan="6">No contents</td>
+		</tr>
+	<% } %>
+	</tbody>
+</table>
+<hr>
+<div class="text-center">
+	<p style="display: inline;">page :</p>
+	<% for(var i = 1; i <= pagination; i++) { %>
+		<li style="display: inline;"><a href="/index/<%= i %>" class="next-page"><%= i %></a></li>
+	<% } %>
+	<a href="/search" class="btn btn-default" style="float: left;">Search Watch</a>
+	<a href="/makeboard" class="btn btn-default" style="float: right;">New Watch</a>
+</div>
+<br>
+<% } else { %>
+<h1>Welcome to CodeWatch!</h1>
+<hr/>
+<br>
+<h2>What is CodeWatch?</h2>
+<br>
+<p>CodeWatch is real time code watching web service.</p>
+<br>
+<h2>What for CodeWatch?</h2>
+<br>
+<p>For study, for teach, for teamwork, anything you want to use.</p>
+<p>And even CodeWatch's source code is open in Github. Use this for everything.</p>
+<br>
+<h2>How can i use it?</h2>
+<br>
+<p>Just sign in and login. We don't need your email or personal imformation. Only ID and password.</p>
+<br>
+<h2>Request for user</h2>
+<br>
+<p>We use Heroku for this service. So when you use this page, you should wait for few seconds.</p>
+<br>
+<% } %>
+
+<% include _footer %>

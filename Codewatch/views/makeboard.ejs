@@ -1,0 +1,17 @@
+﻿<% include _header %>
+
+<h1>Make new Watch</h1>
+<hr>
+<p>Writer : <%= writer %></p>
+<form action="/makeboard" method="post">
+	<input name="title" type="taxt" class="form-control" placeholder="Title" required>
+	<br>
+	<p>If you want, you can 'lock' the Watch with password.</p>
+    <input name="password" type="password" class="form-control" placeholder="Password">
+	<input name="confirmpassword" type="password" class="form-control" placeholder="Confirm Password">
+	<br>
+    <input type="submit" value="Make Watch" class="btn btn-default pull-right">
+	<a href="/" class="btn btn-default pull-left">Cancel</a>
+</form>
+
+<% include _footer %>
