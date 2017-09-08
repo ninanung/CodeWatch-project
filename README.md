@@ -7,14 +7,14 @@ When we study programming, we often use Stackoverflow. But asking and answering 
 If we have enough time, well, yeah, it's ok. But when homework deadline is today 24:00, it's not OK at all.  
 
 I thought "If someone can ansewr while someone writing, it will be cool!".  
-And i need to study node.js, express, socket.io, etc while summer vacation.
-So! i decide to make CodeWatch.
+And i need to study node.js, express, socket.io, etc while summer vacation.  
+So! i decide to make CodeWatch.  
 
 ### How to use?  
-First sign up, log in, make Watch and have fun!
+First sign up, log in, make Watch and have fun!  
 In real time code, you can chat while someone writing.  
 And in ended code, you can comment for that.  
-That's it. This project is very simple.
+That's it. This project is very simple.  
 
 ### Used modules and programs.  
 #### programs  
