@@ -21,7 +21,7 @@
 		<% contents.forEach(function(item) { %>
 		<% i++ %>
 		<tr>
-			<% if(item.password === "no password, there's no password, really no password") { %>
+			<% if(item.lock === false) { %>
 				<th scope="row"><%= i %></th>
 				<td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><a href="/board/<%= item.title %>"><%= item.title %></a></td>
 				<td><%= item.writer %></td>
