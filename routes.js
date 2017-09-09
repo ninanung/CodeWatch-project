@@ -165,6 +165,7 @@ router.post("/makeboard", function (req, res, next) {
             var newBoard = new Board({
                 writer: username,
                 password: password,
+                lock: true,
                 title: boardTitle
             });
             var url = "/board/" + boardTitle;
