@@ -2,7 +2,8 @@
 
 var board = mongoose.Schema({
     writer: { type: String, required: true, unique: false },
-    password: { type: String, default: "no password, there's no password, really no password" },
+    password: String,
+    lock: { type: boolen, default: false },
     title: { type: String, required: true, unique: true },
     code: String,
     explanation: String,
