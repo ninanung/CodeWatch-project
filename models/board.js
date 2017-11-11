@@ -3,7 +3,7 @@
 var board = mongoose.Schema({
     writer: { type: String, required: true, unique: false },
     password: String,
-    lock: { type: boolen, default: false },
+    lock: { type: Boolean, default: false },
     title: { type: String, required: true, unique: true },
     code: String,
     explanation: String,
