@@ -24,6 +24,7 @@ In text box, you can freely write code and watchers can see like this
 ![board_writing_watcher](http://postfiles2.naver.net/MjAxNzExMTdfMjMz/MDAxNTEwOTIyNzgwMDUw.T8MKsABtIRN9QsCAE2UxdO7J8UCZcVXJhgTNL8w9i08g.YtAlU3RfmCwSZr--jZHfCXGN0R7A_G2l11Z7pVnf7w0g.PNG.ninanung/watcher.png?type=w773)
 
 When writer change code, code that watchers see will change automatically. Also, writer and watchers can chat like this.
+
 ![board_chat](http://postfiles2.naver.net/MjAxNzExMTdfMzcg/MDAxNTEwOTIyNzgwMDE5.lOZN1v8UN96KYW5lxmxiuDLkrMfADC5foqxu15OX7egg.qfp1HMVeNt7XXxSwoL-bkc7ed2UJHjXez-1DczaN0j4g.PNG.ninanung/chat.png?type=w773)
 
 If code goes wrong, or there's some more efficient way. Please talk to writer.  
